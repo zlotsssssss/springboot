@@ -43,6 +43,11 @@ public class SpringbootApplication {
         Car car = run.getBean(Car.class);
         System.out.println(car);
 
+        Person person = run.getBean("person", Person.class);
+        Person person1 = run.getBean("person", Person.class);
+        System.out.println(person);
+        System.out.println(person1);
+        System.out.println(person1 == person);
 
 
     }
