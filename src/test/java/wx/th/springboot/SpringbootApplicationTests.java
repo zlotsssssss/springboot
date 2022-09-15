@@ -12,7 +12,9 @@ class SpringbootApplicationTests {
     UserMapper userMapper;
     @Test
     void contextLoads() {
-        User user = userMapper.queryUserById(4);
+        User user1 = new User();
+        user1.setPassword("123");
+        User user = userMapper.queryUserById(user1);
         System.out.println(user);
     }
 

@@ -7,7 +7,7 @@ import wx.th.springboot.pojo.User;
 @Mapper
 @Repository
 public interface UserMapper {
-    User queryUserById(int id);
+    User queryUserById(User user);
 
     int insert(User user);
 

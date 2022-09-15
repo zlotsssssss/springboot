@@ -11,7 +11,12 @@
     <select id="queryUserById" resultType="User" resultMap="userMap">
         select *
         from t_user
-        where id=#{id};
+        <where>
+            <if test="password != null and password !=''">
+                and password = #{password}
+            </if>
+        </where>
+
     </select>
     
     <insert id="insert" parameterType="User" useGeneratedKeys="true" keyProperty="id">
